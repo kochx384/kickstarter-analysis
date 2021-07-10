@@ -6,7 +6,7 @@ Using the spreadsheets that we have already prepared for Louise, we need to put 
 ### Outcomes Based on Launch Dates
 I created a pivot chart using the data from the Kickstarter sheet and filtered it by the parent category "Theater." The rows consist of the date created by month, and the columns consist of the different outcomes "successful," "failed," and "canceled." The values also consist of the count of outcomes. 
 
-<img src="images/pivot_table1.png" width="343" height="295"> <img scr="images/pivot_table2.png" width="462" height="250">
+<img src="images/pivot_table1.png" width="343" height="295"><img src="images/pivot_table_sections.png" width="362" height="250">
 
 From this pivot table, I was able to create a line chart that shows the number of outcomes based on the month of the launch date.
 
@@ -40,7 +40,9 @@ After that, with the goal and percentage columns selected, I created a line char
 
 ![](resources/Outcomes_vs_Goals.png)
 ## Challenges
-When trying to figure out the formula to pull the number of campaigns based on the different goal ranges, the first formula I created excluded the first number of the range and the last number of the range. Also, it pulled the number from all the campaigns, all outcomes and all subcategories in the Kickstarter sheet. Even when the sheet was filtered based on the outcomes and was filtered on the subcategory "plays," it still would pull the number from all the campaigns on the Kickstarter sheet. I researched on the internet how to use a COUNTIFS formula that is inclusive, and was able to improve on my formula that included both the first number and the last number of the range. I also researched how to use a COUNTIFS formula that looks at multiple criteria, and was able to improve my formula so that it looks at not only the goal amount column but also the outcome and the subcategory of the campaigns.
+When trying to figure out the formula to pull the number of campaigns based on the different goal ranges, the first formula I created excluded the first number of the range and the last number of the range. Also, it pulled the number from all the campaigns, all outcomes and all subcategories in the Kickstarter sheet. Even when the sheet was filtered based on the outcomes and was filtered on the subcategory "plays," it still would pull the number from all the campaigns on the Kickstarter sheet. I researched on the internet how to use a COUNTIFS formula that is inclusive, and was able to improve on my formula that included both the first number and the last number of the range. I also researched how to use a COUNTIFS formula that looks at multiple criteria, and was able to improve my formula so that it looks at not only the goal amount column but also the outcome and the subcategory of the campaigns. 
+
+Here is the resource that helped me with my COUNTIFS formulas: [COUNTIFS and COUNTIF with multiple criteria](https://www.ablebits.com/office-addins-blog/2014/07/10/excel-countifs-multiple-criteria/)
 ## Conclusions
 ### Theater Outcomes Based on Launch Dates
 According to the Theater Outcomes Based on Launch Dates line chart, the highest number of successful campaigns were launched in May. Also, the difference between the number of failed campaigns and the number of successful campaigns is also the greatest in May. Therefore, it is more likely to have a successful campaign when it is launched in May. Also, according to the Theater Outcomes Based on Launch Dates line chart, the number of successful campaigns drops to the lowest when they are launched from November to December. And, the number of failed campaigns and the number of successful campaigns are the closest when they are launched in December. Therefore, it is the least likely to have a successful campaign when it is launched in December.
