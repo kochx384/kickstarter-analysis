@@ -5,12 +5,16 @@ The purpose of this analysis is to give Louise the chance to compare the outcome
 Using the spreadsheets that we have already prepared for Louise, we need to put together charts and tables to show us the data of the campaign outcomes based on their launch dates and their fundraising goals.
 ### Outcomes Based on Launch Dates
 I created a pivot chart using the data from the Kickstarter sheet and filtered it by the parent category "Theater." The rows consist of the date created by month, and the columns consist of the different outcomes "successful," "failed," and "canceled." The values also consist of the count of outcomes. From this pivot table, I was able to create a line chart that shows the number of outcomes based on the month of the launch date.
+
+![](resources/Theater_Outcomes_vs_Launch.png)
 ### Outcomes Based on Fundraising Goals
 First, I created a column of ranges of different goal amounts, a column for the number of each different outcome based on the different goal amount ranges, a column of the total number of projects for each goal amount, and a column for the percentage of each different outcome. 
 Next, I put in formulas to calculate each of the columns I created. For the number of each campaign outcome, I used the COUNTIFS function that looked at the goal amount column, the outcome column, and the subcategory column from the main Kickstarter sheet. Therefore, the formula pulls the number of each outcome for each range of goals amounts only looking at those that were plays. 
 Then, for the total number of projects, I used the SUM formula to add together the number of projects of each outcome for each range of the fundraising goals. Therefore, it adds the total number of projects of each row, each range of goal amounts, and populates it in the total projects column.
 Next, for the percentage of each outcome columns, I divided the number of each outcome by the total number of projects. I also formatted the columns so that the number would be presented as a percentage. 
 After that, with the goal and percentage columns selected, I created a line chart that shows the percentage of each outcome across the different ranges of the fundraising goals.
+
+![](resources/Outcomes_vs_Goals.png)
 ## Challenges
 When trying to figure out the formula to pull the number of campaigns based on the different goal ranges, the first formula I created excluded the first number of the range and the last number of the range. Also, it pulled the number from all the campaigns, all outcomes and all subcategories in the Kickstarter sheet. Even when the sheet was filtered based on the outcomes and was filtered on the subcategory "plays," it still would pull the number from all the campaigns on the Kickstarter sheet. I researched on the internet how to use a COUNTIFS formula that is inclusive, and was able to improve on my formula that included both the first number and the last number of the range. I also researched how to use a COUNTIFS formula that looks at multiple criteria, and was able to improve my formula so that it looks at not only the goal amount column but also the outcome and the subcategory of the campaigns.
 ## Conclusions
