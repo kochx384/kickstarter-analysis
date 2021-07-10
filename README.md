@@ -13,9 +13,26 @@ From this pivot table, I was able to create a line chart that shows the number o
 ![](resources/Theater_Outcomes_vs_Launch.png)
 ### Outcomes Based on Fundraising Goals
 First, I created a column of ranges of different goal amounts, a column for the number of each different outcome based on the different goal amount ranges, a column of the total number of projects for each goal amount, and a column for the percentage of each different outcome. 
-Next, I put in formulas to calculate each of the columns I created. For the number of each campaign outcome, I used the COUNTIFS function that looked at the goal amount column, the outcome column, and the subcategory column from the main Kickstarter sheet. Therefore, the formula pulls the number of each outcome for each range of goals amounts only looking at those that were plays. 
-Then, for the total number of projects, I used the SUM formula to add together the number of projects of each outcome for each range of the fundraising goals. Therefore, it adds the total number of projects of each row, each range of goal amounts, and populates it in the total projects column.
+
+<img src="images/outcomes_goals_table.png">
+
+Next, I put in formulas to calculate each of the columns I created. For the number of each campaign outcome, I used the COUNTIFS function that looked at the goal amount column, the outcome column, and the subcategory column from the main Kickstarter sheet. 
+```
+=COUNTIFS(Kickstarter!$D:$D, ">=1000", Kickstarter!$F:$F,"successful",Kickstarter!$R:$R,"plays")-COUNTIFS(Kickstarter!$D:$D, ">4999", Kickstarter!$F:$F,"successful",Kickstarter!$R:$R,"plays")
+```
+Therefore, the formula pulls the number of each outcome for each range of goals amounts only looking at those that were plays. 
+
+Then, for the total number of projects, I used the SUM formula to add together the number of projects of each outcome for each range of the fundraising goals. 
+```
+=SUM(B2:D2)
+```
+Therefore, it adds the total number of projects of each row, each range of goal amounts, and populates it in the total projects column.
+
 Next, for the percentage of each outcome columns, I divided the number of each outcome by the total number of projects. I also formatted the columns so that the number would be presented as a percentage. 
+```
+=B2/E2
+```
+
 After that, with the goal and percentage columns selected, I created a line chart that shows the percentage of each outcome across the different ranges of the fundraising goals.
 
 ![](resources/Outcomes_vs_Goals.png)
