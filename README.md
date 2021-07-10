@@ -34,6 +34,7 @@ Next, for the percentage of each outcome columns, I divided the number of each o
 ```
 I also formatted the columns so that the number would be presented as a percentage. 
 
+<img src="images/outcomes_goals_table_columns.png">
 
 After that, with the goal and percentage columns selected, I created a line chart that shows the percentage of each outcome across the different ranges of the fundraising goals.
 
