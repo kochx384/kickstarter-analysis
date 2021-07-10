@@ -40,7 +40,11 @@ After that, with the goal and percentage columns selected, I created a line char
 
 ![](resources/Outcomes_vs_Goals.png)
 ## Challenges
-When trying to figure out the formula to pull the number of campaigns based on the different goal ranges, the first formula I created excluded the first number of the range and the last number of the range. Also, it pulled the number from all the campaigns, all outcomes and all subcategories in the Kickstarter sheet. Even when the sheet was filtered based on the outcomes and was filtered on the subcategory "plays," it still would pull the number from all the campaigns on the Kickstarter sheet. I researched on the internet how to use a COUNTIFS formula that is inclusive, and was able to improve on my formula that included both the first number and the last number of the range. I also researched how to use a COUNTIFS formula that looks at multiple criteria, and was able to improve my formula so that it looks at not only the goal amount column but also the outcome and the subcategory of the campaigns. 
+When trying to figure out the formula to pull the number of campaigns based on the different goal ranges, the first formula I created excluded the first number of the range and the last number of the range. Also, it pulled the number from all the campaigns, all outcomes and all subcategories in the Kickstarter sheet. 
+```
+=COUNTIFS(Kickstarter!$D:$D, ">1000",Kickstarter!$D:$D, ">4999")
+```
+Even when the sheet was filtered based on the outcomes and was filtered on the subcategory "plays," it still would pull the number from all the campaigns on the Kickstarter sheet. I researched on the internet how to use a COUNTIFS formula that is inclusive, and was able to improve on my formula that included both the first number and the last number of the range. I also researched how to use a COUNTIFS formula that looks at multiple criteria, and was able to improve my formula so that it looks at not only the goal amount column but also the outcome and the subcategory of the campaigns. 
 
 Here is the resource that helped me with my COUNTIFS formulas: [COUNTIFS and COUNTIF with multiple criteria](https://www.ablebits.com/office-addins-blog/2014/07/10/excel-countifs-multiple-criteria/)
 ## Conclusions
@@ -51,3 +55,4 @@ According to the Outcomes Based on Goals line chart, the highest percentage of s
 ### Limitations
 When looking at the Outcomes Based on Goals line chart, it fails to show the number of campaigns as it only shows the percentage. The number of successful campaigns is significantly higher when the goal amount is less than $5000 compared to when the goal is between $30000 and $44999. The number of campaigns drops as the goal amount increases, which makes it difficult to get an accurate and reliable percentage. The line chart makes it look like the amount of successful campaigns with goals less than $5000 is the same as the amount of successful campaigns with goals between $35000 to $44999. However, this is not true.
 
+The Theater Outcomes Based on Launch Dates line chart shows all the outcomes of the campaigns under the parent category "theater" based on the month they were launched, but it does not show how long the campaigns were run. Is the success of a campaign dependent on only the launch date, or is it dependent on both the launch date and the length of the campaign.
