@@ -6,7 +6,8 @@ Using the spreadsheets that we have already prepared for Louise, we need to put 
 ### Outcomes Based on Launch Dates
 I created a pivot chart using the data from the Kickstarter sheet and filtered it by the parent category "Theater." The rows consist of the date created by month, and the columns consist of the different outcomes "successful," "failed," and "canceled." The values also consist of the count of outcomes. 
 
-<img src="images/pivot_table1.png" width="343" height="295"><img scr="images/pivot_table2.png" width="462" height="250">
+<img src="images/pivot_table1.png" width="343" height="295"> <img scr="images/pivot_table2.png" width="462" height="250">
+
 From this pivot table, I was able to create a line chart that shows the number of outcomes based on the month of the launch date.
 
 ![](resources/Theater_Outcomes_vs_Launch.png)
