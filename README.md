@@ -28,10 +28,12 @@ Then, for the total number of projects, I used the SUM formula to add together t
 ```
 Therefore, it adds the total number of projects of each row, each range of goal amounts, and populates it in the total projects column.
 
-Next, for the percentage of each outcome columns, I divided the number of each outcome by the total number of projects. I also formatted the columns so that the number would be presented as a percentage. 
+Next, for the percentage of each outcome columns, I divided the number of each outcome by the total number of projects. 
 ```
 =B2/E2
 ```
+I also formatted the columns so that the number would be presented as a percentage. 
+
 
 After that, with the goal and percentage columns selected, I created a line chart that shows the percentage of each outcome across the different ranges of the fundraising goals.
 
